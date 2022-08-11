@@ -94,7 +94,7 @@
 .sketch-title {
     margin-top: auto;
     margin-bottom: 20px;
-    font-size: 20px;
+    font-size: 25px;
     font-weight: 400;
 }
 
@@ -109,15 +109,27 @@
     width: 500px;
     height: 500px;
     display: grid;
+    border-color: black;
+    border-style: solid;
  }
 
 .sketch-options {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#color {
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+#pixel {
+    font-size: 20px;
 }
 
  .cell {
-    border: solid;
-    border-color: red;
+
  }
 
  .footer {

@@ -2,19 +2,41 @@ const sketchField = document.querySelector('.sketch-field');
 const colorPicker = document.querySelector('#color-picker');
 const pixelPicker = document.querySelector('#pixel-picker');
 
-
 let pixels = 10;
 
-let color = colorPicker.getAttribute('value');
+for (i=1; i<=pixels*pixels; i++) {
+    
 
-function createGrid(x) {
     const cell = document.createElement('div');
-
     cell.classList.add('cell');
 
-    sketchField.setAttribute('style', `grid-template-columns: repeat(${x}, 1fr); grid-template-rows: repeat(${x}, 1fr);`);
+    sketchField.setAttribute('style', `grid-template-columns: repeat(${pixels}, 1fr); grid-template-rows: repeat(${pixels}, 1fr);`)
 
     sketchField.appendChild(cell);
+
+    let color = colorPicker.getAttribute('value');
+
+    function changeColorPicker(event) {
+        color = event.target.value;
+    }
+
+    colorPicker.addEventListener('input', changeColorPicker);
+
+
+
+
+    //function changePixelPicker(event) {
+    //    console.log('pixel picker changed');
+    //    pixels = event.target.value;
+    //    i = 1;
+    //}
+
+    //pixelPicker.addEventListener('input', changePixelPicker);
+
+
+
+
+
 
     let mouseDown = false;
     
@@ -42,54 +64,7 @@ function createGrid(x) {
         }
     });
 
-    colorPicker.addEventListener('input', changeColorPicker);
-
-    pixelPicker.addEventListener('input', changePixelPicker);
-
-}
-
-function changeColorPicker(event) {
-    color = event.target.value;
-}
-
-function changePixelPicker(event) {
-    pixels = event.target.value;
-    i = 1;
-    sketchField.innerHTML = '';
-    for (i=1; i<=pixels*pixels; i++) {
-        createGrid(pixels);
-    }
-}
-
-for (i=1; i<=pixels*pixels; i++) {
-    createGrid(pixels);
-}
-
-
-
-
-
-    
     
 
-    
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-    
-
- 
+ }
 
