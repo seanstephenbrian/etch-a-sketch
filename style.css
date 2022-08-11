@@ -111,6 +111,10 @@
     display: grid;
  }
 
+.sketch-options {
+    display: flex;
+}
+
  .cell {
     border: solid;
     border-color: red;

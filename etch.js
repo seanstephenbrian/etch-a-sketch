@@ -1,4 +1,5 @@
 const sketchField = document.querySelector('.sketch-field');
+const colorPicker = document.querySelector('#color-picker');
 
 let x = prompt('how many cells wide','');
 
@@ -11,6 +12,14 @@ for (i=1; i<=x*x; i++) {
 
     sketchField.appendChild(cell);
 
+    let color = colorPicker.getAttribute('value');
+
+    function changeColorPicker(event) {
+        color = event.target.value;
+    }
+
+    colorPicker.addEventListener('input', changeColorPicker);
+
     let mouseDown = false;
     
     sketchField.addEventListener('mousedown', () => {
@@ -22,20 +31,22 @@ for (i=1; i<=x*x; i++) {
     });
 
     cell.addEventListener('click', () => {
-        cell.setAttribute('style', 'background-color: black;');
+        cell.setAttribute('style', `background-color: ${color};`);
     });
 
     cell.addEventListener('mouseover', () => {
         if (mouseDown) {
-            cell.setAttribute('style', 'background-color: black;');
+            cell.setAttribute('style', `background-color: ${color};`);
         }
     });
 
     cell.addEventListener('mouseout', () => {
         if (mouseDown) {
-            cell.setAttribute('style', 'background-color: black;');
+            cell.setAttribute('style', `background-color: ${color};`);
         }
     });
+
+    
 
  }
 
