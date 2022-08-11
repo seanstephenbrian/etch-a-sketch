@@ -11,4 +11,31 @@ for (i=1; i<=x*x; i++) {
 
     sketchField.appendChild(cell);
 
+    let mouseDown = false;
+    
+    sketchField.addEventListener('mousedown', () => {
+        mouseDown = true;
+    });
+
+    sketchField.addEventListener('mouseup', () => {
+        mouseDown = false;
+    });
+
+    cell.addEventListener('click', () => {
+        cell.setAttribute('style', 'background-color: black;');
+    });
+
+    cell.addEventListener('mouseover', () => {
+        if (mouseDown) {
+            cell.setAttribute('style', 'background-color: black;');
+        }
+    });
+
+    cell.addEventListener('mouseout', () => {
+        if (mouseDown) {
+            cell.setAttribute('style', 'background-color: black;');
+        }
+    });
+
  }
+
