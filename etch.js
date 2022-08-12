@@ -2,7 +2,6 @@ const sketchField = document.querySelector('.sketch-field');
 const colorPicker = document.querySelector('#color-picker');
 const pixelPicker = document.querySelector('#pixel-picker');
 
-
 let pixels = 10;
 
 let color = colorPicker.getAttribute('value');
@@ -16,8 +15,15 @@ function createGrid(x) {
 
     sketchField.appendChild(cell);
 
+    colorPicker.addEventListener('input', changeColorPicker);
+
+    pixelPicker.addEventListener('input', changePixelPicker);
+}
+
+function addListeners() {
+
     let mouseDown = false;
-    
+
     sketchField.addEventListener('mousedown', () => {
         mouseDown = true;
     });
@@ -26,27 +32,31 @@ function createGrid(x) {
         mouseDown = false;
     });
 
-    cell.addEventListener('click', () => {
-        cell.setAttribute('style', `background-color: ${color};`);
+    const cells = document.querySelectorAll('.cell');
+
+    cells.forEach(cell => {
+        cell.addEventListener('mouseover', () => {
+            if (mouseDown) {
+                cell.setAttribute('style', `background-color: ${color};`);
+            }
+        });
     });
 
-    cell.addEventListener('mouseover', () => {
-        if (mouseDown) {
+    cells.forEach(cell => {
+        cell.addEventListener('mouseout', () => {
+            if (mouseDown) {
+                cell.setAttribute('style', `background-color: ${color};`);
+            }
+        });
+    });
+
+    cells.forEach(cell => {
+        cell.addEventListener('click', () => {
             cell.setAttribute('style', `background-color: ${color};`);
-        }
+        });
     });
 
-    cell.addEventListener('mouseout', () => {
-        if (mouseDown) {
-            cell.setAttribute('style', `background-color: ${color};`);
-        }
-    });
-
-    colorPicker.addEventListener('input', changeColorPicker);
-
-    pixelPicker.addEventListener('input', changePixelPicker);
-
-}
+};
 
 function changeColorPicker(event) {
     color = event.target.value;
@@ -59,13 +69,14 @@ function changePixelPicker(event) {
     for (i=1; i<=pixels*pixels; i++) {
         createGrid(pixels);
     }
+    addListeners();
 }
 
 for (i=1; i<=pixels*pixels; i++) {
     createGrid(pixels);
 }
 
-
+addListeners();
 
 
 
