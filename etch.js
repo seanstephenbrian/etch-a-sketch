@@ -1,8 +1,10 @@
 const sketchField = document.querySelector('.sketch-field');
 const colorPicker = document.querySelector('#color-picker');
 const pixelPicker = document.querySelector('#pixel-picker');
+const pixelType = document.querySelector('.pixel-type');
+const artTitle = document.querySelector('.art-title');
 
-let pixels = 10;
+let pixels = pixelPicker.getAttribute('value');
 
 let color = colorPicker.getAttribute('value');
 
@@ -10,6 +12,8 @@ function createGrid(x) {
     const cell = document.createElement('div');
 
     cell.classList.add('cell');
+
+    cell.classList.add('rounded-cell');
 
     sketchField.setAttribute('style', `grid-template-columns: repeat(${x}, 1fr); grid-template-rows: repeat(${x}, 1fr);`);
 
@@ -78,29 +82,13 @@ for (i=1; i<=pixels*pixels; i++) {
 
 addListeners();
 
+function changePixelType() {
+    const cells = document.querySelectorAll('.cell');
+    cells.forEach(cell => {
+        cell.classList.toggle('rounded-cell');
+    });
+}
 
-
-    
-    
-
-    
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-    
-
- 
-
+pixelType.addEventListener('click', () => {
+    changePixelType();
+});

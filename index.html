@@ -19,13 +19,13 @@
 
         <div class="art">
 
-            <div class="title art-title">Georges Seurat, <span class="work-title">A Sunday Afternoon on the Island of La Grande Jatte</span>, 1884-1886, oil on canvas.</div>
+            <div class="title art-title">Georges Seurat, <span style="font-style: italic;">A Sunday Afternoon on the Island of La Grande Jatte</span>, 1884-1886, oil on canvas.</div>
 
             <div class="art-container">
                 <img src="img/la-grande-jatte.jpg">
             </div>
 
-            <div class="options art-options"><button class="refresh">load new artwork</button></div>
+            <div class="options art-options"><button class="refresh">load new masterpiece</button></div>
 
         </div>
 
@@ -39,14 +39,19 @@
 
             <div class="options sketch-options">
 
-                <div class="color-picker-section">
-                    <span id="color">color:</span>
+                <div class="color-picker-option">
+                    <span class="option-text" id="color">color:</span>
                     <input type="color" value="#458245" id="color-picker">
                 </div>
 
-                <div class="pixel-picker-section">
-                    <span id="pixel"># of dots:</span>
-                    <input type="range" min="1" max="50" value="10" class="slider" id="pixel-picker">
+                <div class="pixel-picker-option">
+                    <span class="option-text" id="pixel"># of pixels (resets grid!):</span>
+                    <input type="range" min="1" max="75" value="37" class="slider" id="pixel-picker">
+                </div>
+
+                <div class="radius-option">
+                    <span class="option-text" id="pixel-type">pixel type:</span>
+                    <button class="pixel-type">dot / square</button>
                 </div>
 
             </div>
