@@ -42,7 +42,7 @@ h3 {
 }
 
 .art {
-   max-width: 500px;
+   max-width: 450px;
    margin: 0 50px;
    display: flex;
    flex-flow: column wrap;
@@ -69,8 +69,8 @@ h3 {
 }
 
 .art-container img {
-   max-width: 500px;
-   max-height: 500px;
+   max-width: 450px;
+   max-height: 450px;
 }
 
 .options {
@@ -120,8 +120,8 @@ button:active {
 }
 
 .sketch-field {
-   width: 500px;
-   height: 500px;
+   width: 450px;
+   height: 450px;
    display: grid;
    border-color: black;
    border-style: solid;
