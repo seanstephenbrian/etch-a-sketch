@@ -95,17 +95,17 @@ function pickArt() {
         artTitle.innerHTML = 'Mosaic of Triton, Terme dei Cisiarii, Ostia Antica, Italy, 2nd century CE.';
         artImg.setAttribute('src','ostia.jpg');
     } else if (x === 6) {
-        artTitle.innerHTML = '';
-        artImg.setAttribute('src','');
+        artTitle.innerHTML = 'Chuck Close, <span style="font-style: italic;">Phil White</span>, 2002, relief print with embossing.';
+        artImg.setAttribute('src','close.jpg');
     } else if (x === 7) {
-        artTitle.innerHTML = '';
-        artImg.setAttribute('src','');
+        artTitle.innerHTML = 'Piet Mondrian, <span style="font-style: italic;">Broadway Boogie Woogie</span>, 1942-43, oil on canvas.';
+        artImg.setAttribute('src','mondrian.jpg');
     } else if (x === 8) {
-        artTitle.innerHTML = '';
-        artImg.setAttribute('src','');
+        artTitle.innerHTML = 'Damien Hirst, <span style="font-style: italic;">Gritti (H5-1)</span>, 2018, Diasec-mounted giclée print on aluminium.';
+        artImg.setAttribute('src','hirst.jpg');
     } else if (x === 9) {
-        artTitle.innerHTML = '';
-        artImg.setAttribute('src','');
+        artTitle.innerHTML = 'Paul Signac, <span style="font-style: italic;">Matin</span>, 1907, oil on canvas';
+        artImg.setAttribute('src','signac-2.jpg');
     } else if (x === 10) {
         artTitle.innerHTML = '';
         artImg.setAttribute('src','');
