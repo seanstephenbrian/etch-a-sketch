@@ -105,7 +105,7 @@ function pickArt() {
         artTitle.innerHTML = 'Chuck Close, <span style="font-style: italic;">Phil White</span>, 2002, relief print with embossing.';
         artImg.setAttribute('src','img/close.jpg');
     } else if (x === 7) {
-        artTitle.innerHTML = 'Paul Signac, <span style="font-style: italic;">Matin</span>, 1907, oil on canvas';
+        artTitle.innerHTML = `Paul Signac, <span style="font-style: italic;">La Corne d'Or. Matin</span>, 1907, oil on canvas.`;
         artImg.setAttribute('src','img/signac-2.jpg');
     } else if (x === 8) {
         artTitle.innerHTML = 'Damien Hirst, <span style="font-style: italic;">Gritti (H5-1)</span>, 2018, Diasec-mounted giclée print on aluminium.';
