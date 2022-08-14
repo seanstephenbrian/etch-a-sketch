@@ -83,17 +83,17 @@ function pickArt() {
         artTitle.innerHTML = 'Georges Seurat, <span style="font-style: italic;">A Sunday Afternoon on the Island of La Grande Jatte</span>, 1884-1886, oil on canvas.';
         artImg.setAttribute('src','img/seurat.jpg');
     } else if (x === 2) {
-        artTitle.innerHTML = '';
-        artImg.setAttribute('src','');
+        artTitle.innerHTML = 'Paul Signac, <span style="font-style: italic;">Place des Lices, St. Tropez</span>, 1893, oil on canvas.';
+        artImg.setAttribute('src','signac.jpg');
     } else if (x === 3) {
-        artTitle.innerHTML = '';
-        artImg.setAttribute('src','');
+        artTitle.innerHTML = `Vincent van Gogh, <span style="font-style: italic;">Self-Portrait</span>, 1887, oil on artist's board.`;
+        artImg.setAttribute('src','van-gogh.jpg');
     } else if (x === 4) {
-        artTitle.innerHTML = '';
-        artImg.setAttribute('src','');
+        artTitle.innerHTML = `Mosaics, Basilica di Sant'Apollinare Nuovo, Ravenna, Italy, 6th century CE.`;
+        artImg.setAttribute('src','ravenna.jpg');
     } else if (x === 5) {
-        artTitle.innerHTML = '';
-        artImg.setAttribute('src','');
+        artTitle.innerHTML = 'Mosaic of Triton, Terme dei Cisiarii, Ostia Antica, Italy, 2nd century CE.';
+        artImg.setAttribute('src','ostia.jpg');
     } else if (x === 6) {
         artTitle.innerHTML = '';
         artImg.setAttribute('src','');
