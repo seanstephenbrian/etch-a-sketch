@@ -4,10 +4,15 @@ const pixelPicker = document.querySelector('#pixel-picker');
 const pixelType = document.querySelector('.pixel-type');
 const artTitle = document.querySelector('.art-title');
 const artImg = document.querySelector('.art-img');
+const newMasterpiece = document.querySelector('.new-masterpiece');
 
 let pixels = pixelPicker.getAttribute('value');
 
 let color = colorPicker.getAttribute('value');
+
+newMasterpiece.addEventListener('click', () => {
+    pickArt();
+});
 
 function createGrid(x) {
     const cell = document.createElement('div');
@@ -77,38 +82,41 @@ function changePixelPicker(event) {
     addListeners();
 }
 
+let x = 0;
+
 function pickArt() {
-    let x = Math.floor(Math.random() * 11);
+    x += 1;
     if (x === 1) {
-        artTitle.innerHTML = 'Georges Seurat, <span style="font-style: italic;">A Sunday Afternoon on the Island of La Grande Jatte</span>, 1884-1886, oil on canvas.';
+        artTitle.innerHTML = 'Georges Seurat, <span style="font-style: italic;">A Sunday Afternoon on the Island of La Grande Jatte</span>, 1884-86, oil on canvas.';
         artImg.setAttribute('src','img/seurat.jpg');
     } else if (x === 2) {
         artTitle.innerHTML = 'Paul Signac, <span style="font-style: italic;">Place des Lices, St. Tropez</span>, 1893, oil on canvas.';
-        artImg.setAttribute('src','signac.jpg');
+        artImg.setAttribute('src','img/signac.jpg');
     } else if (x === 3) {
-        artTitle.innerHTML = `Vincent van Gogh, <span style="font-style: italic;">Self-Portrait</span>, 1887, oil on artist's board.`;
-        artImg.setAttribute('src','van-gogh.jpg');
-    } else if (x === 4) {
         artTitle.innerHTML = `Mosaics, Basilica di Sant'Apollinare Nuovo, Ravenna, Italy, 6th century CE.`;
-        artImg.setAttribute('src','ravenna.jpg');
+        artImg.setAttribute('src','img/ravenna.jpg');
+    } else if (x === 4) {
+        artTitle.innerHTML = `Vincent van Gogh, <span style="font-style: italic;">Self-Portrait</span>, 1887, oil on artist's board.`;
+        artImg.setAttribute('src','img/van-gogh.jpg');
     } else if (x === 5) {
         artTitle.innerHTML = 'Mosaic of Triton, Terme dei Cisiarii, Ostia Antica, Italy, 2nd century CE.';
-        artImg.setAttribute('src','ostia.jpg');
+        artImg.setAttribute('src','img/ostia.jpg');
     } else if (x === 6) {
         artTitle.innerHTML = 'Chuck Close, <span style="font-style: italic;">Phil White</span>, 2002, relief print with embossing.';
-        artImg.setAttribute('src','close.jpg');
+        artImg.setAttribute('src','img/close.jpg');
     } else if (x === 7) {
-        artTitle.innerHTML = 'Piet Mondrian, <span style="font-style: italic;">Broadway Boogie Woogie</span>, 1942-43, oil on canvas.';
-        artImg.setAttribute('src','mondrian.jpg');
+        artTitle.innerHTML = 'Paul Signac, <span style="font-style: italic;">Matin</span>, 1907, oil on canvas';
+        artImg.setAttribute('src','img/signac-2.jpg');
     } else if (x === 8) {
         artTitle.innerHTML = 'Damien Hirst, <span style="font-style: italic;">Gritti (H5-1)</span>, 2018, Diasec-mounted giclée print on aluminium.';
-        artImg.setAttribute('src','hirst.jpg');
+        artImg.setAttribute('src','img/hirst.jpg');
     } else if (x === 9) {
-        artTitle.innerHTML = 'Paul Signac, <span style="font-style: italic;">Matin</span>, 1907, oil on canvas';
-        artImg.setAttribute('src','signac-2.jpg');
+        artTitle.innerHTML = 'Piet Mondrian, <span style="font-style: italic;">Broadway Boogie Woogie</span>, 1942-43, oil on canvas.';
+        artImg.setAttribute('src','img/mondrian.jpg');
     } else if (x === 10) {
-        artTitle.innerHTML = '';
-        artImg.setAttribute('src','');
+        artTitle.innerHTML = 'Georges Seurat, <span style="font-style: italic;">Gray Weather, Grande Jatte</span>, 1886-88, oil on canvas.';
+        artImg.setAttribute('src','img/seurat-2.jpg');
+        x = 0;
     }
 }
 
