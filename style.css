@@ -66,6 +66,13 @@ h3 {
    display: flex;
    flex: 1 1 0;
    margin-bottom: 20px;
+   border-style: solid;
+   border-color: black;
+}
+
+.container {
+   box-shadow: 10px 7px 5px #3e3e3ed5;
+
 }
 
 .art-container img {
@@ -85,9 +92,11 @@ h3 {
 
 button {
    font-family: Helvetica, Arial, sans-serif;
+   font-weight: 300;
    background-color: rgba(210, 180, 140, 0.58);
    border-radius: 5px;
    border-style: solid;
+   border-color: rgba(71, 61, 48, 0.788);
 }
 
 button:active {
@@ -108,7 +117,7 @@ button:active {
 .sketch-title {
    margin-top: auto;
    margin-bottom: 20px;
-   font-size: 25px;
+   font-size: 20px;
    font-weight: 400;
 }
 
