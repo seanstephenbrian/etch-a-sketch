@@ -1,7 +1,7 @@
 # etch-a-sketch
 "Etch-a-sketch"-inspired interactive drawing tool
 
-This was one of my first JavaScript projects for the Odin Project. The assignment was to create an etch-a-sketch-like tool, demonstrating proficiency with JavaScript DOM manipulation and employing slightly more involved CSS styling. I took the prompt in a slightly different direction by creating an interface for the user to recreate significant pointillist or otherwise "pixelated" paintings/other works of art from throughout art history.
+This was one of my first JavaScript projects for the Odin Project. The assignment was to create an etch-a-sketch-like tool, demonstrating proficiency with JavaScript DOM manipulation and employing slightly more involved CSS styling. I took the prompt in a slightly different direction by creating an interface for the user to recreate pointillist or otherwise "pixelated" paintings and other significant works of art from throughout art history.
 
 The left side of the page displays a work of art; by clicking the button below the image, the user is able to cycle through a selection of 10 images. The caption (above the image) is also updated when the user clicks the button. A straightforward JS function accomplishes this by incrementing a variable for the current image index each time the button is clicked, then updating the image title text and art image src simultaneously. This functionality exists apart from the sketch field: the user can advance from one art image to the next without erasing their current sketch.
 
