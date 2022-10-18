@@ -10,3 +10,9 @@ The left side of the page displays a work of art; by clicking the button below t
 The right side of the page is the sketch field itself, which is rendered by a couple JS functions that manipulate the DOM. Taking the user's pixel size selection (a number between 1 and 75; let's call it 'x'), exactly x * x number of cell <code>div</code>s are added to the DOM within the sketch field container, then CSS grid is used to order these cells in a square of x rows by x columns. Overall, it is a fairly standard etch-a-sketch field with a few fun features: using a slider, the user can change the number of pixels in the grid (updating this selection erases the user's sketch, because the sketch grid needs to be re-rendered with the new number of pixels), and a color picker input allows the user to choose the color of their dots (changing this value does not erase the sketch as the grid does not need to be re-rendered). There is also a button to allow the user to change between round or square pixels; clicking this button triggers a JS function which iterates through the entire sketch field grid and toggles a 'rounded-cell' class on each individual cell <code>div</code>.
 
 After advancing further in the Odin Project curriculum, I revisited the project to clean up the code slightly and add explanatory comments to the JavaScript.
+
+Example sketches:
+
+<img src="https://raw.githubusercontent.com/seanstephenbrian/etch-a-sketch/main/img/screenshot-1.png" alt="Example sketch of Chuck Close's Philip Glass portrait">
+
+<img src="https://raw.githubusercontent.com/seanstephenbrian/etch-a-sketch/main/img/screenshot-2.png" alt="Example sketch of Van Gogh's self-portrait">
